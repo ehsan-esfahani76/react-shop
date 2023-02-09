@@ -1,0 +1,46 @@
+@import "../../colors.scss";
+.pri {
+  width: 350px;
+  a{
+    text-decoration: none;
+    color: $black;
+  }
+  &__img {
+    display: flex;
+    justify-content: center;
+    img {
+      height: 350px;
+      max-width: 100%;
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    button {
+        background-color: $green;
+        border: 0;
+        padding: 0px 30px;
+        height: 40px;
+        cursor: pointer;
+    }
+    &__remove{
+      border:3px solid $green !important;
+      background-color: $white !important;
+    }
+    p{
+        display: flex;
+        align-items: center;
+        &::after {
+            content: "";
+            display: inline-block;
+            background: url(../../assets/star.f18b2fadf3b42309674806de99238168.svg);
+            background-repeat: no-repeat;
+            position: relative;
+            top: 5px;
+            left: 5px;
+            width: 30px;
+            height: 30px;
+          }
+    }
+  }
+}

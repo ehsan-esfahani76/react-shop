@@ -1,0 +1,7 @@
+@import "./shop/mixins";
+.App{
+    margin: 0 100px;
+    @include breakpoint(768px){
+        margin: 0;
+      }
+}

@@ -1,0 +1,59 @@
+@import "../../colors.scss";
+@import "../../mixins";
+.prd {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  gap: 100px;
+  @include breakpoint(768px) {
+    margin-top: 200px;
+    gap: 30px;
+    height: auto;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__img {
+    border: 2px solid $black;
+    padding: 20px;
+    border-radius: 10px;
+    img {
+      width: 400px;
+      height: 500px;
+      @include breakpoint(768px) {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include breakpoint(768px) {
+      text-align: center;
+      width: 100%;
+    }
+    h3 {
+      border-bottom: 1px solid $grey;
+      padding-bottom: 10px;
+    }
+    p {
+      border-bottom: 1px solid $grey;
+      padding-bottom: 10px;
+      font-size: 20px;
+    }
+    button {
+      background-color: $green;
+      border: 0;
+      padding: 0px 30px;
+      height: 40px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    &__remove {
+      background-color: $white !important;
+      border: 2px solid $green !important;
+    }
+  }
+}

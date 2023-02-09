@@ -1,0 +1,78 @@
+@import "../colors.scss";
+@import "../mixins.scss";
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background-color: $white;
+  border-bottom: 1px solid $black;
+  z-index: 2;
+  flex-wrap: wrap;
+  @include breakpoint(768px){
+    width: 100%;
+    justify-content: center;
+  }
+  &__search {
+    display: flex;
+    @include breakpoint(768px){
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  &__input {
+    position: relative;
+    border: 1px solid $black;
+    padding-left: 30px;
+    input {
+      outline: none;
+      border: 0;
+      padding: 10px 0;
+    }
+    img {
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      cursor: pointer;
+    }
+  }
+  &__link {
+    position: relative;
+    span {
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: red;
+    }
+    a {
+        text-decoration: none;
+        background-color: $green;
+        color: $white;
+        padding: 0px 10px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+        border-radius: 5px;
+        &::after {
+          content: "";
+          display: inline-block;
+          background: url(../assets/cart.c7fe1498050872f15dc11730ce706edd.svg);
+          background-repeat: no-repeat;
+          position: relative;
+          top: 5px;
+          left: 5px;
+          width: 30px;
+          height: 30px;
+        }
+      }
+  }
+}

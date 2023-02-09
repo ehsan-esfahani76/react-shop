@@ -1,0 +1,22 @@
+@import "../colors.scss";
+@import "../mixins";
+.category{
+    display: flex;
+    @include breakpoint(768px){
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: center;
+        margin-top: 90px;
+      }
+    margin: 40px 0 60px 0 ;
+    button{
+        margin: 0 5px;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+}
+.category__active{
+    background-color: $grey;
+    color: $white;
+}

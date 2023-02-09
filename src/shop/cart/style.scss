@@ -1,0 +1,62 @@
+@import "../colors.scss";
+@import "../mixins.scss";
+.cart {
+  margin-top: 100px;
+  @include breakpoint(768px){
+    margin:200px 10px 50px 10px;
+  }
+  &__item {
+    display: flex;
+    gap: 30px;
+    margin: 50px 0;
+    position: relative;
+    &__img1 {
+      height: 150px;
+      width: 150px;
+    }
+    &__img2{
+      width: 30px;
+      height: 30px;
+      align-self: center;
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+      @include breakpoint(768px){
+        top: 80px;
+      }
+    }
+    select {
+      width: 100px;
+    }
+  }
+  &__total {
+    border: 1px solid $black;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 30px 0;
+    &__item {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      background-color: $green;
+      border: 0;
+      width: 20%;
+      text-align: center;
+      padding: 10px 10px;
+      margin-bottom: 30px;
+      color: $black;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+  h1{
+    text-align: center;
+  }
+}
